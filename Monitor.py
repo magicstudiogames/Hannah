@@ -9,9 +9,36 @@ class Monitor:
         self.db_path = db_path
         self.notifier = notifier
         self.suspicious_patterns = {
-            'crypto_mining': {'xmrig.exe', 'nicehash.exe'},
-            'malware': {'trojan.exe', 'ransomware.exe'}
+            'crypto_mining': {
+                'xmrig.exe', 'nicehash.exe', 'minerd.exe', 'cpuminer.exe', 'ethminer.exe',
+                'ccminer.exe', 'cgminer.exe', 'nbminer.exe', 't-rex.exe'
+            },
+            'ransomware': {
+                'wannacry.exe', 'notpetya.exe', 'locky.exe', 'revil.exe',
+                'maze.exe', 'cerber.exe', 'ryuk.exe', 'darkside.exe'
+            },
+            'trojan': {
+                'njrat.exe', 'darkcomet.exe', 'quasar.exe', 'remcos.exe', 'backdoor.exe',
+                'poisonivy.exe', 'sub7.exe', 'zeus.exe', 'keylogger.exe'
+            },
+            'adware': {
+                'couponprinter.exe', 'searchprotection.exe', 'adservice.exe',
+                'dealply.exe', 'webdiscoverbrowser.exe'
+            },
+            'spyware': {
+                'finfisher.exe', 'flexispy.exe', 'mspy.exe', 'spyagent.exe', 'spytech.exe'
+            },
+            'keylogger': {
+                'keylogger.exe', 'spyrix.exe', 'actualkeylogger.exe', 'refog.exe'
+            },
+            'rootkit': {
+                'tdss.exe', 'zeroaccess.exe', 'necurs.exe'
+            },
+            'worm': {
+                'conficker.exe', 'blaster.exe', 'sasser.exe', 'iloveyou.exe'
+            }
         }
+
         self.load_preferences()
 
     def load_preferences(self):
