@@ -1,3 +1,4 @@
 # Ignorar pastas de build
+.idea/
 build/
 dist/
