@@ -1,7 +1,6 @@
-# Ignorar pastas de build
-.idea/
+# Pastas do PyInstaller
 build/
 dist/
-Create.bat
-Hannah.iml
-Hannah.spec
+
+# Configurações de IDE
+.idea/
